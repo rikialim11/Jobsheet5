@@ -51,4 +51,28 @@ class MyApp extends StatelessWidget {
 }
 
 class TeksUtama extends StatelessWidget {
- 
+  final String teks1;
+  final String teks2;
+
+  TeksUtama({required this.teks1, required this.teks2});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            teks1,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            teks2,
+            style: TextStyle(fontSize: 16),
+          ),
+        ],
+      ),
+    );
+  }
+}
